@@ -1,0 +1,103 @@
+-------------ex1-----------
+
+function isFive(num) {
+  if (num === 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(3);
+console.log(5);
+
+
+==================================================================
+
+------------------ex2-----------------
+
+function isSubString(searchString, subString) {
+  let searchString_upper = searchString.toUpperCase();
+  let subString_upper = subString.toUpperCase();
+  let condition = searchString_upper.indexOf(subString_upper) === -1
+
+  if (condition) {
+    return false;
+  } else {
+    return true;
+  }
+}
+console.log("hello I'm Malak", "i'm") //true
+console.log("how are you", "fine") //false
+
+------------------ex3-----------------
+
+
+function eitherStringIncluded(sentence, word1, word2) {
+  let upperSent = sentence.toUpperCase();
+  let upperWrd1 = word1.toUpperCase();
+  let upperWrd2 = word2.toUpperCase();
+  let condition =
+    upperSent.includes(upperWrd1) || upperSent.includes(upperWrd2);
+
+  if (condition) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(
+  eitherStringIncluded(
+    "i'm carrying my laptop and doing my exercices",
+    "laptop",
+    "my"
+  )
+);
+
+console.log(
+  eitherStringIncluded("today is sunday,May 26 2024", "hiss", "beautiful")
+);
+
+
+------------------ex4-----------------
+
+
+function logBetween(lowNum, highNum) {
+  for (let i = lowNum; i <= highNum; i++) {
+    console.log(i);
+  }
+}
+
+logBetween(10, 30);
+
+
+------------------ex5-----------------
+
+
+function logBetweenStepper(min, max, step) {
+  for (let i = min; i <= max; i = i + step) {
+    console.log(i);
+  }
+}
+
+logBetweenStepper(-10, 15, 5);
+
+------------------ex6-----------------
+
+?????
+
+------------------ex7-----------------
+
+function leastCommonMultiple(num1, num2) {
+  let min = 30;
+
+  for (let i = 1; i < 20; i++) {
+    if (i % num1 === 0 && i % num2 === 0 && i < min) {
+      min = i;
+    }
+  }
+
+  return min;
+}
+console.log(leastCommonMultiple(2, 4));
